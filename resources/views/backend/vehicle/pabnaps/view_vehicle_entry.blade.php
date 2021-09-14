@@ -89,9 +89,9 @@
                            </td>
                            <td>
                            <a href="{{ route('pabnaps.seized.vehicle.edit', $station->id) }}" class="btn cyan waves-effect waves-light" type="submit">Edit</a>
-                    
+                           @if(Auth::user()->usertype=='Admin' || Auth::user()->usertype=='OC')
                            <a href="{{ route('pabnaps.seized.vehicle.delete', $station->id) }}" class="btn btn-danger" id="delete" type="submit">Delete</a>
-                           
+                           @endif
 
                            </td>
                          

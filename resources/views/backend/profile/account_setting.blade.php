@@ -122,6 +122,7 @@
                 <select name="role" id="role" class="block mt-1 w-full">
                       <option value="" disabled selected>Choose Role Type</option>
                       <option value="Admin" {{ ($userData->role == "Admin" ? "selected" : "") }}>Admin</option>
+                      <option value="OC" {{ ($userData->role == "OC" ? "selected" : "") }}>OC</option>
                       <option value="Operator" {{ ($userData->role == "Operator" ? "selected" : "") }}>Operator</option>
                       
                       </select>
@@ -142,8 +143,8 @@
                 <div class="input-field">
                     <select name="status" id="status" class="block mt-1 w-full">
                       <option value="" disabled selected>Choose Status Type</option>
-                      <option value="1" {{ ($userData->status == "1" ? "selected" : "") }}>Active</option>
-                      <option value="0" {{ ($userData->status == "0" ? "selected" : "") }}>Inactive</option>
+                      <option value="0" {{ ($userData->status == "0" ? "selected" : "") }}>Active</option>
+                      <option value="1" {{ ($userData->status == "1" ? "selected" : "") }}>Inactive</option>
                       
                       </select>
                       <label>Select Profile User Status Type</label>
@@ -160,27 +161,18 @@
                   <small class="errorTxt1"></small>
                 </div>
                 </div>
+               
                 <div class="col s6">
-                <div class="input-field">
-                    <select name="gender" id="gender" class="block mt-1 w-full">
-                      <option value="" disabled selected>Choose Gender</option>
-                      <option value="Male" {{ ($userData->gender == "Male" ? "selected" : "") }}>Male</option>
-                      <option value="Female" {{ ($userData->gender == "Female" ? "selected" : "") }}>Female</option>
-                      
-                      </select>
-                      <label>Select Profile Gender</label>
-                  <small class="errorTxt1"></small>
-                </div>
-                </div>
-              </div>
-              
-            
-              <div class="col s12">
                 <div class="input-field">
                 <input type="text" id="uname" name="address" value="{{ $userData->address}}" data-error=".errorTxt1">
                   <label for="company">Address</label>
                 </div>
               </div>
+
+              </div>
+              
+            
+              
               <div class="col s12 display-flex justify-content-end form-action">
                 <button type="submit" class="btn indigo waves-effect waves-light mr-2">
                   Save changes

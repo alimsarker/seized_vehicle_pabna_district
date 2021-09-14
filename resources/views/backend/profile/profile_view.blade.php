@@ -45,9 +45,9 @@
                 <h5>Mobile No : <b>{{ $user->mobile   }}</b></h5>
              
               
-                <h5>Gender : <b>{{ $user->gender  }}</b></h5>
                 
-                <h5>Status : <b>{{ $user->status   }}</b></h5>
+                
+                <h5>Status : <b>{{  $user->status == 0 ?'Active':'InActive'  }}</b></h5>
                
                 <h5>Address :<address> <b>{{ $user->address   }}</b></address></h5>
               </div>

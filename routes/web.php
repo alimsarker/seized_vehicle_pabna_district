@@ -127,4 +127,5 @@ Route::prefix('profile')->group(function(){
         });
 
         Route::get('/pabnaps/daterange', [PabnaPsDaterangeController::class,'index'])->name('pabnaps.seized.vehicle.monthly.report');
-        
+     
+       

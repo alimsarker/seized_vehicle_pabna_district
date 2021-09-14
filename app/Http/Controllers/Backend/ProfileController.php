@@ -41,7 +41,7 @@ class ProfileController extends Controller
       $data->email = $request->email;
       $data->mobile  = $request->mobile ;
       $data->address = $request->address;
-      $data->gender = $request->gender;
+    
       $data->status = $request->status;
     
       

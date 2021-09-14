@@ -19,12 +19,13 @@
   <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
         <link rel="stylesheet" href="{{asset('assets/css/bootstrap-datepicker.css')}}" />
         <script src="{{asset('assets/js/bootstrap-datepicker.js')}}"></script>
-        <script src="{{asset('assets/js/tableToExcel.js')}}" type="text/javascript"></script> 
+        <script src="{{asset('assets/js/tableToExcel.js')}}" type="text/javascript"></script>
+         
  </head>
  <body>
-  <div class="container">    
+ <div class="container">    
      <br />
-     <h3 align="center"><u><b> PABNA POLICE STATION VEHICLES DETAILS  DATE FILTERING REPORT</b></u> </h3>
+     <h3 align="center"><u><b>  টেবিল</b></u> </h3>
      <br />
             <br />
             <div class="row input-daterange">
@@ -37,9 +38,10 @@
                 <div class="col-md-4">
                     <button type="button" name="filter" id="filter" class="btn btn-primary">Filter</button>
                     <button type="button" name="refresh" id="refresh" class="btn btn-default">Refresh</button>
-                    <a href="" class="btn btn-success">BACK</a>
+                    <a href="http://127.0.0.1:8000/dashboard" class="btn btn-success">BACK</a>
                     <button style="float: right;margin-top: -17px;" class="btn btn-sm btn-danger" onclick="javascript:tableToExcel('order_table', 'W3C Example Table');">Excel export</button>
-                                
+                    <button style="float: right;margin-top: -17px;" class="btn btn-sm btn-danger"><a target="_blanks" href="">PDF export</a></button>
+                                 
                 </div>
             </div>
             <br />

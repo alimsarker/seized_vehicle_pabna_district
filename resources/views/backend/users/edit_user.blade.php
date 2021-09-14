@@ -33,6 +33,7 @@
                             <select name="role" id="role" class="block mt-1 w-full" required="">
                             <option value="" disabled selected>Choose Role Type</option>
                             <option value="Admin" {{ ($allData->role == "Admin" ? "selected" : "") }}>Admin</option>
+                            <option value="OC" {{ ($allData->role == "OC" ? "selected" : "") }}>OC</option>
                             <option value="Operator" {{ ($allData->role == "Operator" ? "selected" : "") }}>Operator</option>
                             
                             </select>

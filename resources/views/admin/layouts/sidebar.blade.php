@@ -45,22 +45,22 @@ $route = Route::current()->getName();
         @endif
            <!-- ---------------------------------START STUDENT MANAGEMENT-------------------------------------------------------------------------- -->
         
-         <li class="bold"><a class="collapsible-header waves-effect waves-cyan {{ ($prefix == '/vehicles') ? 'active' : '' }}" href="JavaScript:void(0)"><i class="material-icons">motorcycle</i><span class="menu-title" data-i18n="motorcycle">Vehicle Management</span></a>
+         <!-- <li class="bold"><a class="collapsible-header waves-effect waves-cyan {{ ($prefix == '/vehicles') ? 'active' : '' }}" href="JavaScript:void(0)"><i class="material-icons">motorcycle</i><span class="menu-title" data-i18n="motorcycle">Vehicle Management</span></a>
           <div class="collapsible-body">
             <ul class="collapsible collapsible-sub" data-collapsible="accordion">
               <li><a class="{{ ($route == 'vehicle.entry.view') ? 'active' : '' }}" href="{{ route('vehicle.entry.view') }}"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Add">View Vehicles </span></a>
               </li>
               <li><a class="" href=""><i class="material-icons">radio_button_unchecked</i><span data-i18n="Add">Add</span></a>
-              </li>
+              </li> -->
               <!-- <li><a href="page-users-edit.html"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Edit">Edit</span></a>
               </li> -->
-            </ul>
+            <!-- </ul>
           </div>
-        </li>
+        </li> -->
          <!-- ---------------------------------END STUDENT MANAGEMENT-------------------------------------------------------------------------- -->
         
       <!-- ---------------------------------START PABNA PS MANAGEMENT-------------------------------------------------------------------------- -->
-        
+      @if(Auth::user()->ps_name=='pabna' || Auth::user()->role=='Admin') 
       <li class="bold"><a class="collapsible-header waves-effect waves-cyan {{ ($prefix == '/pabnaps') ? 'active' : '' }}" href="JavaScript:void(0)"><i class="material-icons">motorcycle</i><span class="menu-title" data-i18n="motorcycle">Pabna PS Management</span></a>
           <div class="collapsible-body">
             <ul class="collapsible collapsible-sub" data-collapsible="accordion">
@@ -70,14 +70,36 @@ $route = Route::current()->getName();
               </li>
               <li><a class="{{ ($route == 'pabnaps.seized.vehicle.group.date') ? 'active' : '' }}" href="{{ route('pabnaps.seized.vehicle.group.date') }}"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Add">groupBy Date </span></a>
               </li>
-              <li><a class="{{ ($route == 'pabnaps.seized.vehicle.monthly.report') ? 'active' : '' }}" href="{{ route('pabnaps.seized.vehicle.monthly.report') }}"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Add">Monthly Report Seized Vehicles</span></a>
+              <li><a class="{{ ($route == 'pabnaps.seized.vehicle.monthly.report') ? 'active' : '' }}" href="{{ route('pabnaps.seized.vehicle.monthly.report') }}"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Add">Monthly Report SeizedVH</span></a>
               </li>
               <!-- <li><a href="page-users-edit.html"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Edit">Edit</span></a>
               </li> -->
             </ul>
           </div>
         </li>
+        @endif
          <!-- ---------------------------------END PABNA PS MANAGEMENT-------------------------------------------------------------------------- -->
+         <!-- ---------------------------------START ISHWARDI PS MANAGEMENT-------------------------------------------------------------------------- -->
+      @if(Auth::user()->ps_name=='ishurdi' || Auth::user()->role=='Admin') 
+      <li class="bold"><a class="collapsible-header waves-effect waves-cyan {{ ($prefix == '/pabnaps') ? 'active' : '' }}" href="JavaScript:void(0)"><i class="material-icons">motorcycle</i><span class="menu-title" data-i18n="motorcycle">Ishurdi PS Management</span></a>
+          <div class="collapsible-body">
+            <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+              <li><a class="{{ ($route == 'pabnaps.vehicle.view') ? 'active' : '' }}" href="{{ route('pabnaps.vehicle.view') }}"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Add">View Vehicles List </span></a>
+              </li>
+              <li><a class="{{ ($route == 'pabnaps.seized.vehicle.list') ? 'active' : '' }}" href="{{ route('pabnaps.seized.vehicle.list') }}"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Add">View Status Vehicles </span></a>
+              </li>
+              <li><a class="{{ ($route == 'pabnaps.seized.vehicle.group.date') ? 'active' : '' }}" href="{{ route('pabnaps.seized.vehicle.group.date') }}"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Add">groupBy Date </span></a>
+              </li>
+              <li><a class="{{ ($route == 'pabnaps.seized.vehicle.monthly.report') ? 'active' : '' }}" href="{{ route('pabnaps.seized.vehicle.monthly.report') }}"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Add">Monthly Report SeizedVH</span></a>
+              </li>
+              <!-- <li><a href="page-users-edit.html"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Edit">Edit</span></a>
+              </li> -->
+            </ul>
+          </div>
+        </li>
+        @endif
+         <!-- ---------------------------------END ISHWARDI PS MANAGEMENT-------------------------------------------------------------------------- -->
+        
         
         
        

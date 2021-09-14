@@ -9,8 +9,8 @@ use App\Http\Controllers\Controller;
 class UserController extends Controller
 {
     public function ViewUser(){
-        // $allData = User::all();
-        $data['allData'] = User::where('usertype','Admin')->get();
+        $data['allData'] = User::all();
+        // $data['allData'] = User::where('usertype','Admin')->get();
         return view('backend.users.view_user', $data);
     }
     
